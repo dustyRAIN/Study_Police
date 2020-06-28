@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/prev_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Verify Image"
+        android:paddingHorizontal="48dp"
+        android:paddingVertical="12dp"
+        android:textColor="@color/colorClassText"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/pt_sans_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/msg_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prev_title">
+
+        <TextView
+            android:id="@+id/tv_msg_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pt_sans_bold"
+            android:text="Please wait..."
+            android:textColor="@color/colorClassText"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingVertical="16dp" />
+
+        <ImageView
+            android:id="@+id/img_face_prev"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirm_lower_part"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msg_panel">
+
+        <TextView
+            android:id="@+id/dia_not_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSideBG"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="12dp"
+            android:text="Snap Again"
+            android:layout_marginHorizontal="0.5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:fontFamily="@font/pt_sans_bold"
+            android:gravity="center_vertical|center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dia_its_me"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dia_its_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSideBG"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="12dp"
+            android:text="It's Me"
+            android:layout_marginHorizontal="0.5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:fontFamily="@font/pt_sans_bold"
+            android:gravity="center_vertical|center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dia_not_me"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

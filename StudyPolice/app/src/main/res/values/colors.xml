@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#90ff00</color>
+
+    <color name="colorPoliceColor">#02568b</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLabelColor">#3972b8</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLabelAsh">#474a4b</color>
+    <color name="colorSideBG">#31424c</color>
+    <color name="colorBar">#b6c6cf</color>
+    <color name="colorSideBGDark">#283237</color>
+
+    <color name="colorNavyBlue">#0d2e43</color>
+    <color name="colorSpinner">#fbfbfb</color>
+    <color name="colorStudent">#3c88a7</color>
+    <color name="colorMaterial">#39B53E</color>
+    <color name="colorClassText">#1c4861</color>
+    <color name="colorProgress">#2e94eb</color>
+    <color name="colorProgressText">#4cabe0</color>
+    <color name="colorPink">#A73D65</color>
+
+    <color name="colorMagenta">#EC486C</color>
+
+    <color name="colorShoutBG">#03568C</color>
+
+    <color name="colorLightGreen">#23AE28</color>
+    <color name="colorLightRed">#D52121</color>
+
+    <color name="colorCardBackground">#F9F9F9</color>
+
+    <color name="colorMaterialTextBG">#d7d7d7</color>
+    <color name="colorMaterialText">#2b77a7</color>
+    <color name="colorContentBG">#f2f2f2</color>
+
+    <color name="colorSignButtBG">#00385b</color>
+
+
+    <color name="gray">#EAEAEC</color>
+    <color name="white">#ffffff</color>
+    <color name="deepblue">#2339B6</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

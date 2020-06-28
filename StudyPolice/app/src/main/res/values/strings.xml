@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Study Police</string>
+
+    <string name="fac">Frequently Accessed Contents</string>
+    <string name="noti">Important Shouts</string>
+    <string name="title_activity_side">SideActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+    <string-array name="demon_arrays">
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+
+    <string name="title_activity_material_view">MaterialViewActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="important_message"># A clear picture of your face is very important in order to utilize all the features properly.\n\n# You have to again go through this process after every 14 days.\n\n# We don\'t use your facial information in any illegal activity.\n\n# For further queries, please email at lamb.is.foh@gmail.com\n\n# Thank you for using StudyPolice!</string>
+
+    <string name="server_client_id">911614986050-uaeksqc69jg63teb5i848idq53qrfs9p.apps.googleusercontent.com</string>
+
+</resources>

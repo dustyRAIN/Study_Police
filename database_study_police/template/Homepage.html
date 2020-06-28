@@ -1,0 +1,86 @@
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title>Homepage</title>
+
+    <!-- this line links you css file(s) to this html. put css file name as a value of attr href  -->
+    <link rel="stylesheet" href="{% static 'Homepage.css' %}" type="text/css"/>
+</head>
+
+<body>
+    <header>
+        <div class="side_bar_cont">
+            <div class="user_pic_name_cont">
+                <div class="user_pic_cont">
+                    <div class="user_pic"><img id="prof_pic" src="http://placehold.it/500x500" alt="" /></div>
+                </div>
+                <div class="user_name_cont"><p class="text_style" id="text_name">{{ User.name }}</p></div>
+            </div>
+
+            <div class="side_middle_cont">
+                <div class="menu_item" id="menu_item_1"><p class="text_style">Classes</p></div>
+            </div>
+
+            <div class="side_lower_cont">
+                <p class="text_style" id="text_log_out">Log out</p>
+            </div>
+        </div>
+
+
+
+        <div class="main_view_cont">
+            <div class="main_view_top_cont">
+                <div class="main_view_top_left_cont"><img id="site_logo" src="../static/images/icon_studypolice.png"/></div>
+                <div class="main_view_top_right_cont"><p class="text_style" id="text_heading">Homepage</p></div>
+            </div>
+
+            <div class="main_view_main_cont">
+                <div class="main_view_content_area">
+
+                    <div class="Web_class1">
+                        <div class="Students_Info">
+
+                            <p id="Student_Text">Created Class</p>
+                            <p id="Add_Student_Text">+add</p> 
+                        </div>
+                        <div class="branch1">
+                            <ul>
+                                {% for class in created_class %}
+                                <li>
+                                    <a href="class/{{ class.id }}">{{ class.name }}</a>
+                                </li> 
+                                {% endfor %}   
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="Web_class2">
+                        <div class="Materials_Info">
+
+                            <p id="Material_Text">Joined Class</p> 
+                            <p id="Add_Student_Text">+add</p>
+                    
+                        </div>
+
+
+                        <div class="branch2">
+                            <ul>
+                                {% for class in joined_class %}
+                                <li>
+                                    <a href="class/{{ class.getClassID }}">{{ class.classroom }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    
+                   </div>   
+            </div>
+
+        </div>
+    </header>
+</body>
+
+
+</html>
+{% endblock %}

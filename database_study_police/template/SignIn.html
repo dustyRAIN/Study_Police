@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+<head>
+    <title>Sign In to Study Police</title>
+
+    <!-- this line links you css file(s) to this html. put css file name as a value of attr href  -->
+    <link rel="stylesheet" href="{% static 'SignIn.css' %}" type="text/css"/>
+</head>
+
+<body>
+    
+    <div class="all-container">
+        <div class="logo-container"> <img src="{% static 'images/icon_studypolice_white.png' %}" /> </div>
+
+        <div class="mid_container">
+            <div class="sign_in_cont">
+                <div class="sign_in_title"><p>Sign In</p></div>
+                <form action="../rest-auth/login/" method="POST">
+                    <input type="text" name="email" placeholder="Email"></input>
+                    <input type="password" name="password" placeholder="Password"></input>
+                    <input type="submit" value="SIGN IN"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

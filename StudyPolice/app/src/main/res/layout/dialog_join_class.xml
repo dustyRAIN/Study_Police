@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pt_sans_bold"
+        android:gravity="center_vertical"
+        android:paddingStart="28dp"
+        android:paddingEnd="48dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="Access Code"
+        android:background="@color/colorPoliceColor"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/create_class_option"/>
+
+    <EditText
+        android:id="@+id/create_class_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pt_sans"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Access Code"
+        android:inputType="textVisiblePassword"
+        android:padding="8dp"
+        android:textColor="@color/colorPoliceColor"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/join_class_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
+
+    <TextView
+        android:id="@+id/join_class_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="8dp"
+        android:text="Join Class"
+        android:textSize="22sp"
+        android:background="@color/colorPoliceColor"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_class_option" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

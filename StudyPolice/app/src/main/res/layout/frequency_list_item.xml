@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="2dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/cont_cont"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="@color/colorContentBG"
+        app:layout_constraintVertical_weight=".8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/content_title">
+
+        <ImageView
+            android:id="@+id/ic_cont_created_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_teacher" />
+
+        <ImageView
+            android:id="@+id/ic_cont_joined_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_students" />
+
+        <ImageView
+            android:id="@+id/ic_cont_material"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_material" />
+
+    </FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/content_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/pt_sans_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="CSE323"
+        android:textSize="12sp"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="8dp"
+        android:background="@color/colorMaterialTextBG"
+        android:textColor="@color/colorShoutBG"
+        app:layout_constraintVertical_weight=".2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_cont" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassDataDetailsActivity">
+
+    <include
+        android:id="@+id/sp_main_toolbar"
+        layout="@layout/sp_toolbar" />
+
+    <TextView
+        android:id="@+id/class_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pt_sans_bold"
+        android:text="A Class Has No Name"
+        android:textAlignment="center"
+        android:textColor="@color/colorClassText"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_main_toolbar" />
+
+    <Spinner
+        android:id="@+id/all_students"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:elevation="12dp"
+        android:entries="@array/demon_arrays"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:popupElevation="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/all_materials"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/class_title" />
+
+    <Spinner
+        android:id="@+id/all_materials"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:elevation="12dp"
+        android:entries="@array/demon_arrays"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:popupElevation="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/all_students"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/all_students"
+        app:layout_constraintTop_toBottomOf="@+id/all_students" />
+
+    <TextView
+        android:id="@+id/tvb_stu_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Student Info"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="8dp"
+        android:fontFamily="@font/pt_sans_bold"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorMagenta"
+        app:layout_constraintEnd_toStartOf="@+id/tvb_mat_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/all_students" />
+
+    <TextView
+        android:id="@+id/tvb_mat_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Material Info"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="8dp"
+        android:fontFamily="@font/pt_sans_bold"
+        android:textColor="@color/colorMaterial"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@+id/tvb_stu_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvb_stu_info"
+        app:layout_constraintTop_toBottomOf="@+id/tvb_stu_info" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvb_stu_info">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_students"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/rv_materials"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

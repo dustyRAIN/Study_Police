@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassDataActivity">
+
+    <include
+        android:id="@+id/sp_main_toolbar"
+        layout="@layout/sp_toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/upper_cont"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight=".40"
+        app:layout_constraintBottom_toTopOf="@+id/lower_cont"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_main_toolbar">
+
+        <TextView
+            android:id="@+id/title_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/pt_sans_bold"
+            android:text="This Week's Overview"
+            android:textAlignment="center"
+            android:textColor="@color/colorClassText"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/activity_progress"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:indeterminateDuration="20000"
+            android:progress="80"
+            android:progressDrawable="@drawable/circle"
+            app:layout_constraintBottom_toTopOf="@+id/fig_activity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/average_progress"
+            app:layout_constraintTop_toBottomOf="@+id/title_overview"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_activity_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/pattaya"
+            android:text="0.7"
+            android:textAlignment="center"
+            android:textColor="@color/colorProgressText"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_progress"
+            app:layout_constraintEnd_toEndOf="@+id/activity_progress"
+            app:layout_constraintStart_toStartOf="@+id/activity_progress"
+            app:layout_constraintTop_toTopOf="@+id/activity_progress" />
+
+        <TextView
+            android:id="@+id/fig_activity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pt_sans_italic"
+            android:text="Activity index"
+            android:textAlignment="center"
+            android:textColor="@color/colorClassText"
+            android:textSize="18sp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/activity_progress"
+            app:layout_constraintStart_toStartOf="@+id/activity_progress"
+            app:layout_constraintTop_toBottomOf="@+id/activity_progress" />
+
+
+        <ProgressBar
+            android:id="@+id/average_progress"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:indeterminateDuration="20000"
+            android:progress="80"
+            android:progressDrawable="@drawable/circle"
+            app:layout_constraintBottom_toTopOf="@+id/fig_average"
+            app:layout_constraintLeft_toRightOf="@+id/activity_progress"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_overview"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_average_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/pattaya"
+            android:text="0.7"
+            android:textAlignment="center"
+            android:textColor="@color/colorProgressText"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="@+id/average_progress"
+            app:layout_constraintEnd_toEndOf="@+id/average_progress"
+            app:layout_constraintStart_toStartOf="@+id/average_progress"
+            app:layout_constraintTop_toTopOf="@+id/average_progress" />
+
+        <TextView
+            android:id="@+id/fig_average"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pt_sans_italic"
+            android:text="Average Study Hr"
+            android:textAlignment="center"
+            android:textColor="@color/colorClassText"
+            android:textSize="18sp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/average_progress"
+            app:layout_constraintStart_toStartOf="@+id/average_progress"
+            app:layout_constraintTop_toBottomOf="@+id/average_progress" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lower_cont"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight=".50"
+        app:layout_constraintBottom_toTopOf="@+id/tvb_upload_material"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upper_cont">
+
+        <TextView
+            android:id="@+id/label_top_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/pt_sans_bold"
+            android:text="Top Student"
+            android:textColor="@color/colorClassText"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/view_all_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/pt_sans_bold"
+            android:text="view all"
+            android:textColor="@color/colorClassText"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/label_top_student"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_top_student" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_student_cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorMagenta"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_top_student">
+
+            <TextView
+                android:id="@+id/student_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pt_sans_bold"
+                android:text="Anupom Roy"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/stud_study_hr"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/stud_study_hr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/pt_sans_bold_italic"
+                android:text="14"
+                android:textColor="@color/colorWhite"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/stud_label_hr"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/stud_label_hr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pt_sans_bold_italic"
+                android:text="hr"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.68" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <TextView
+            android:id="@+id/label_top_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/pt_sans_bold"
+            android:text="Top Material"
+            android:textColor="@color/colorClassText"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_student_cont" />
+
+        <TextView
+            android:id="@+id/view_all_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/pt_sans_bold"
+            android:text="view all"
+            android:textColor="@color/colorClassText"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/label_top_material"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_top_material" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_material_cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorMaterial"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_top_material">
+
+            <TextView
+                android:id="@+id/material_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pt_sans_bold"
+                android:text="Things we had done"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/material_study_hr"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/material_study_hr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/pt_sans_bold_italic"
+                android:text="14"
+                android:textColor="@color/colorWhite"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/material_label_hr"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/material_label_hr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pt_sans_bold_italic"
+                android:text="hr"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.68" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tvb_upload_material"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorNavyBlue"
+        android:fontFamily="@font/pt_sans_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingHorizontal="12dp"
+        android:text="+ Upload Material"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lower_cont"
+        app:layout_constraintVertical_weight=".10" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
